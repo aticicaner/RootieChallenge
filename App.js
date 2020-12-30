@@ -35,3 +35,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
 })
+
+// TODO: ADD A FILTER TO SELECT INCOMPLETE TODO to todos selector
