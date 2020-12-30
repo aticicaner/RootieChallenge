@@ -10,8 +10,10 @@ import {
 import ListItem from './src/components/ListItem'
 import BottomBar from './src/components/BottomBar'
 
+import store from './src/store/store'
+
 export default function App() {
-  console.log('App was rendered')
+  console.log('App was rendered', store)
 
   return (
     <SafeAreaView style={styles.containerStyles}>

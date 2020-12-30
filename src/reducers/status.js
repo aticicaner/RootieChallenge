@@ -1,8 +1,10 @@
-const statusReducerDefaultState = []
+const statusReducerDefaultState = 'incomplete'
 
-export default (state = statusReducerDefaultState, action) => {
+export const statusReducer = (state = statusReducerDefaultState, action) => {
   switch (action.type) {
     case 'SET_STATUS':
       return action.status
+    default:
+      return state
   }
 }
