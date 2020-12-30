@@ -1,7 +1,14 @@
 import React from 'react'
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native'
+import { useSelector } from 'react-redux'
+import todoSelector from '../selectors/todos'
+
+const selectTodos = (state) => state.todos
 
 export default function ListItem() {
+  const todos = useSelector(selectTodos)
+  const todo = todoSelector(todos)
+
   return (
     <TouchableOpacity onPress={() => console.log('Clicked on the item!')}>
       <View style={styles.listItemStyles}>
@@ -18,6 +25,7 @@ export default function ListItem() {
           </View>
         </View>
       </View>
+      <Text>todo: {JSON.stringify(todo)}</Text>
     </TouchableOpacity>
   )
 }

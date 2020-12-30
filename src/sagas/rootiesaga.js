@@ -4,24 +4,14 @@ import axios from 'axios'
 
 const URL = 'https://jsonplaceholder.typicode.com/todos'
 
-function fetchTodos() {
-  const result = axios.get(URL).then((res) => {
-    // console.log(res)
-    console.log('request success, ', res.data[0])
-  })
-  return result
-}
-
 export function* handleFetchTodos() {
   try {
-    yield put({ type: 'SET_STATUS', status: 'loading' })
-    let resp = yield call(fetchTodos())
+    const res = yield call(axios.get, URL)
 
     yield put({
       type: 'SET_TODOS',
-      todos: resp.data,
+      todos: res.data,
     })
-    yield put({ type: 'SET_STATUS', status: 'complete' })
   } catch (e) {
     yield put({ type: 'SET_STATUS', status: 'error', e })
   }
