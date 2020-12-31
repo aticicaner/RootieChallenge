@@ -33,7 +33,11 @@ export const ListItemStyles = {
     width: 100,
     resizeMode: 'contain',
   },
-  titleStyles: {
+  todoTitleStyles: {
+    fontWeight: '700',
     width: '85%',
+  },
+  todoTimeStyles: {
+    fontWeight: '700',
   },
 }

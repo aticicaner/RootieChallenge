@@ -21,11 +21,9 @@ export default function ListItem() {
             source={require('../../assets/character19.png')}
           />
           <View style={styles.textContainerStyles}>
-            <Text>
-              ID: {todo.id}, UID: {todo.userId}
-            </Text>
-            <Text>Completed: {todo.completed.toString()}</Text>
-            <Text style={styles.titleStyles}>Title: {todo.title}</Text>
+            <Text style={styles.todoTimeStyles}>09:45</Text>
+            <Text style={styles.todoTitleStyles}>{todo.title}</Text>
+            <Text>Complete 2 tasks →</Text>
           </View>
         </View>
       </View>
