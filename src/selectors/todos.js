@@ -1,3 +1,6 @@
 export default (todos = []) => {
-  return todos[Math.floor(Math.random() * todos.length)]
+  const incompleteTodos = todos.filter((todo) => {
+    return todo.completed === false
+  })
+  return incompleteTodos[Math.floor(Math.random() * incompleteTodos.length)]
 }
