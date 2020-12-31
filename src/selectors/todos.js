@@ -10,6 +10,9 @@ export default (todos = []) => {
       completed: false,
     }
   ) => {
+    if (todo.title.length > 35) {
+      todo.title = todo.title.substring(0, 35).concat('...')
+    }
     return todo
   }
   const selected =

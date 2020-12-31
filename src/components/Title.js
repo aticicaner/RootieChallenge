@@ -8,6 +8,7 @@ export default function Title() {
 const styles = StyleSheet.create({
   titleStyles: {
     marginBottom: 20,
+    marginRight: '80%',
     justifyContent: 'flex-start',
   },
 })

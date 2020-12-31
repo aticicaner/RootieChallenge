@@ -7,11 +7,11 @@ const buttonContents = [
     text: 'Overdue',
   },
   {
-    source: require('../../assets//map-pin.png'),
+    source: require('../../assets/map-pin.png'),
     text: 'Today',
   },
   {
-    source: require('../../assets//menu.png'),
+    source: require('../../assets/menu.png'),
     text: 'Activity',
   },
 ]
@@ -23,7 +23,7 @@ export default function BottomBar() {
         <TouchableOpacity
           key={index}
           style={styles.bottomMenuButtonStyles}
-          onPress={() => console.log('Clicked on the item!')}
+          onPress={() => {}}
         >
           <Image source={item.source} />
           <Text>{item.text}</Text>

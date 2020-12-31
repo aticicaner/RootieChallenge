@@ -1,8 +1,8 @@
 import React from 'react'
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native'
 import { useSelector } from 'react-redux'
-import todoSelector from '../selectors/todos'
 
+import todoSelector from '../selectors/todos'
 import { pickRandomColor } from '../tools/pickRandomColor'
 
 const selectTodos = (state) => state.todos
@@ -12,7 +12,7 @@ export default function ListItem() {
   const todo = todoSelector(todos)
 
   return (
-    <TouchableOpacity onPress={() => console.log('Clicked on the item!')}>
+    <TouchableOpacity onPress={() => {}}>
       <View style={styles.listItemStyles}>
         <View style={styles.innerListItemStyles}></View>
         <View style={styles.listItemContentStyles}>
@@ -25,7 +25,7 @@ export default function ListItem() {
               ID: {todo.id}, UID: {todo.userId}
             </Text>
             <Text>Completed: {todo.completed.toString()}</Text>
-            <Text>Title: {todo.title}</Text>
+            <Text style={styles.titleStyles}>Title: {todo.title}</Text>
           </View>
         </View>
       </View>
@@ -60,11 +60,13 @@ const styles = StyleSheet.create({
     height: '95%',
     width: '88%',
     marginLeft: '10%',
-    // marginRight: '5%',
   },
   logoStyles: {
     height: 100,
     width: 100,
     resizeMode: 'contain',
+  },
+  titleStyles: {
+    width: '85%',
   },
 })

@@ -12,6 +12,6 @@ export function* handleFetchTodos() {
       todos: res.data,
     })
   } catch (e) {
-    yield put({ type: 'SET_STATUS', status: 'error', e })
+    throw new Error('API call unsuccessful')
   }
 }

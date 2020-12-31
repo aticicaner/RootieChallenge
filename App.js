@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  StatusBar,
-  Platform,
-} from 'react-native'
+import { StyleSheet, SafeAreaView, StatusBar, Platform } from 'react-native'
 import { Provider } from 'react-redux'
 
 import store from './src/store/store'
@@ -36,6 +30,4 @@ const styles = StyleSheet.create({
   },
 })
 
-// TODO: ADD A FILTER TO SELECT INCOMPLETE TODO to todos selector
-
-// TODO: State at the moment : Request successful, state is not being set, views are okay
+// TODO: decouple styles, remove clogs, move image url to constants
