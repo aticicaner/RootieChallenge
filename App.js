@@ -8,16 +8,17 @@ import {
 } from 'react-native'
 import { Provider } from 'react-redux'
 
+import store from './src/store/store'
+
 import ListItem from './src/components/ListItem'
 import BottomBar from './src/components/BottomBar'
-
-import store from './src/store/store'
+import Title from './src/components/Title'
 
 export default function App() {
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.containerStyles}>
-        <Text style={styles.titleStyles}>TODAY</Text>
+        <Title />
         <ListItem />
         <BottomBar />
       </SafeAreaView>
@@ -32,10 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-  },
-  titleStyles: {
-    marginBottom: 20,
-    justifyContent: 'flex-start',
   },
 })
 

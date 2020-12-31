@@ -1,8 +1,7 @@
 import { call, put } from 'redux-saga/effects'
-
 import axios from 'axios'
 
-const URL = 'https://jsonplaceholder.typicode.com/todos'
+import { URL } from '../tools/constants'
 
 export function* handleFetchTodos() {
   try {

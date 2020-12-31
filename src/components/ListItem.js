@@ -3,6 +3,8 @@ import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native'
 import { useSelector } from 'react-redux'
 import todoSelector from '../selectors/todos'
 
+import { pickRandomColor } from '../tools/pickRandomColor'
+
 const selectTodos = (state) => state.todos
 
 export default function ListItem() {
@@ -19,20 +21,21 @@ export default function ListItem() {
             source={require('../../assets/character19.png')}
           />
           <View style={styles.textContainerStyles}>
-            <Text>9:45</Text>
-            <Text>Training Reinforcement</Text>
-            <Text>Complete 2 tasks -{`>`}</Text>
+            <Text>
+              ID: {todo.id}, UID: {todo.userId}
+            </Text>
+            <Text>Completed: {todo.completed.toString()}</Text>
+            <Text>Title: {todo.title}</Text>
           </View>
         </View>
       </View>
-      <Text>todo: {JSON.stringify(todo)}</Text>
     </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
   listItemStyles: {
-    backgroundColor: '#5b94e3',
+    backgroundColor: pickRandomColor(),
     borderRadius: 8,
     flexDirection: 'row',
     height: 110,
