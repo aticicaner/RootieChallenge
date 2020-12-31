@@ -1,3 +1,5 @@
+import { TITLE_CHARACTER_LIMIT } from '../tools/constants'
+
 export default (todos = []) => {
   const incompleteTodos = todos.filter((todo) => {
     return todo.completed === false
@@ -10,8 +12,8 @@ export default (todos = []) => {
       completed: false,
     }
   ) => {
-    if (todo.title.length > 35) {
-      todo.title = todo.title.substring(0, 35).concat('...')
+    if (todo.title.length > TITLE_CHARACTER_LIMIT) {
+      todo.title = todo.title.substring(0, TITLE_CHARACTER_LIMIT).concat('...')
     }
     return todo
   }

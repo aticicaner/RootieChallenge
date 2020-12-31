@@ -10,8 +10,12 @@ const colors = [
   '#ff9557',
   '#9e8f86',
   '#869e92',
+  '#6b818a',
+  '#888a6b',
+  '#9a89b3',
+  '#9cb4b8',
 ]
 
-export const pickRandomColor = () => {
+export default () => {
   return colors[Math.floor(Math.random() * colors.length)]
 }

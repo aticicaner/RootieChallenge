@@ -29,5 +29,3 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 })
-
-// TODO: decouple styles, remove clogs, move image url to constants
